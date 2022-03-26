@@ -49,7 +49,7 @@ def save(query, results, id, path):
 
 #intializing the color descriptor
 cd = ColorDescriptor((16,4,4))
-searcher = ['moment', 'combined']
+searcher = ['combined']
 moment_q_index, hist_q_index, orb_q_index = [], [], []
 for q in queries:
     query = cv2.imread(q)
@@ -87,10 +87,10 @@ for q in queries:
         orb_q_index.append({imgId:queryFeatures_orb})
         combined_results = s1.combined_search(moment_results, orb_results)
         #plotting(query,combined_results, window_name ='combined_results')
-        save(query,combined_results, id=imgId, path='resulted_image/combined/')
+        save(query,combined_results, id=imgId, path='resulted_image/combined_2/')
     cv2.destroyAllWindows()
 #save the query index
-if 'histogram' in searcher or 'combined' in searcher:
+if 'histogram' in searcher:
     for q in hist_q_index:
         hist_index .update(q)
 
