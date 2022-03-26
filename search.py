@@ -63,7 +63,6 @@ for q in queries:
     s1 = Searcher()
     if 'histogram' in searcher:
         queryFeatures = cd.describe(query, x_segments=2, y_segments=2, color_descriptor='histogram')
-        #queryFeatures = [str(f) for f in queryFeatures]
         hist_results, hist_index = s1.search(queryFeatures, limit=5, combine=False, path='index.json')
         hist_q_index.append({imgId: queryFeatures})
         if plot:
