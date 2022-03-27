@@ -14,15 +14,15 @@ The above problems can be solved by allowing an inverse image search which will 
  
  1. Download the dataset from [here](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset) and extract it to a folder
  2. Indexing the images using one or multiple descriptor, each descriptor will create a json file with image id and feature 
-  * we need to provide the descriptor name : - moment, -histogram, -orb
-  * as well the name of the output json file
+  * the dataset folder path before -d
+  * we need to provide the descriptor name : - moment, -histogram, -orb followed by the name of the output json file
   
 ```python
-python index.py -d 'image_fashion'  -moment "index_mom2.json" --> for one descriptor 
+python index.py -d 'image_fashion'  -moment "index_moment.json" --> for one descriptor 
 
-python index.py -d 'image_fashion' -ci 'index2.json' -orbi "index_orb2.json" --> for multiple descriptor 
+python index.py -d 'image_fashion' -histogram 'index2.json' -orbi "index_orb.json" --> for multiple descriptor 
 ```
- 3. Providing the query image path and running the rearch
+ 3. Running the search : 
   * here again we need to provide the name of the descriptor or descriptors we want to use, possible options are : histogram, color moment, orb, and combined(combining color moment and orb)
   * we can use the flag -P if we want to only plot the resulted images
   * or use the flag -S if we want to save the results to disk
