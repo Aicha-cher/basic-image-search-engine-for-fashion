@@ -1,4 +1,4 @@
-# basic-image-search-engine-for-fashion
+# Basic image search engine for fashion
 ## Introduction
 
 Often ecommerce clients find it difficult to  find the exact terms to describe apparel  they wish to buy
