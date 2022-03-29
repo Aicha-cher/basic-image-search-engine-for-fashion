@@ -32,3 +32,5 @@ python index.py -d 'image_fashion' -histogram 'index2.json' -orbi "index_orb.jso
  python search.py -P -Q image_fashion/1526.jpg -M combined histogram --> two descriptor histogram abd combined and we plot them only
  python search.py -P -Q image_fashion/1526.jpg  image_fashion/1527.jpg -M histogram --> one descriptor histogram abd combined and we plot them only
  ```
+## Contributor
+Aicha cheridi
